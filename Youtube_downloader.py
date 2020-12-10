@@ -8,20 +8,21 @@ yt = YouTube(link)
 print('Title: ' + yt.title)
 
 #Number of views
-print ('Viewcount: ' + yt.views)
+print ('Viewcount: ' + str(yt.views))
+#change yt.views to a string as it can't concatenate an integer
 
 #Length of the Video
-print('Video is ' + yt.length + 'seconds long.')
+print('Video is ' + str(yt.length) + ' seconds long.')
 
 question = input('Is this the correct video? Enter y or n: ')
-if question == 'y':
+if question == 'y' or 'Y':
     # Filtering out the streams that are audio only and downloading the first in the list
-    print('Your download will begin shortly')
+    print('Your download will now begin!')
     yt_dload = yt.streams.filter(audio_only=True).first()
     location = input('Enter the file path of where you want the audio to be saved: ')
     yt_dload.download(location)
     print('Your download is now complete!')
-elif question == 'n':
+elif question == 'n' or 'N':
     print('Enter another link when prompted')
 else:
     print('Incorrect character!')
