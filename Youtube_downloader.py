@@ -54,7 +54,3 @@ downloader()
 
 # https://www.youtube.com/watch?v=l7DVd3nwdaw
 # example url - disney music
-
-# wasn't working previously, yt.streams would show an empty list
-# had to run 'python -m pip install git+https://github.com/nficano/pytube' in the command line to get up to date pytube version
-
