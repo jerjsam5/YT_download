@@ -5,3 +5,6 @@ had to run 'python -m pip install git+https://github.com/nficano/pytube' in the 
 now seeing the error "urllib.error.HTTPError: HTTP Error 410: Gone", thinking maybe pytube module has changed names or something like that. 
 The example youtube url is still working so not an issue with that. 
 looks like there's a bug in the pytube module that causes these errors (https://stackoverflow.com/questions/68606981/how-do-i-download-youtube-videos-with-python)
+
+25/09/2021
+above issue has been resolved, just needed to upgrade pytube to version 11.0.1 (https://stackoverflow.com/questions/68680322/pytube-urllib-error-httperror-http-error-410-gone)
