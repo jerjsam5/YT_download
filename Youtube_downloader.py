@@ -16,7 +16,10 @@ download_folder = os.path.join(home, 'Downloads')
 def downloader():
     link = input('Enter a YouTube link to be downloaded: ')
     # called on_progress function inside the yt variable so it will show progress bar when the download begins
-    yt = YouTube(link, on_progress_callback=on_progress)
+    try:
+        yt = YouTube(link, on_progress_callback=on_progress)
+    except:
+        print("Invalid link entered.")
     #Video Title
     print('\nTitle: ' + yt.title)
     #Number of views
