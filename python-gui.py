@@ -4,10 +4,11 @@ window = tk.Tk()
 frame = tk.Frame()
 
 greeting = tk.Label(
-    text = "YouTube to MP4 Downloader",
-    fg   = "black",
-    bg   = "red")
+    master = frame,
+    text   = "YouTube to MP4 Downloader")
 greeting.pack()
+
+frame.pack()
 
 
 
